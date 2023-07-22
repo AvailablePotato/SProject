@@ -1,0 +1,7 @@
+{
+  "name": "Project",
+  "version": "1.0.0",
+  "dependencies": {
+    "@salesforce/apex": "^0.0.21"
+  }
+}

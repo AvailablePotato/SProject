@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ApexVcsIndex">
+    <index-record>
+      <option name="path" value="/src/layouts/ContactPointAddress-Contact Point Address Layout.layout" />
+      <option name="type" value="MODIFIED" />
+    </index-record>
+    <index-record>
+      <option name="path" value="/src/objects/PromotionQualifier.object" />
+      <option name="type" value="MODIFIED" />
+    </index-record>
+    <index-record>
+      <option name="path" value="/src/lwc/helloWorld/helloWorld.html" />
+      <option name="type" value="MODIFIED" />
+    </index-record>
+    <index-record>
+      <option name="path" value="/src/lwc/helloWorld/helloWorld.js-meta.xml" />
+      <option name="type" value="MODIFIED" />
+    </index-record>
+    <index-record>
+      <option name="path" value="/src/lwc/helloWorld/helloWorld.js" />
+      <option name="type" value="MODIFIED" />
+    </index-record>
+    <index-record>
+      <option name="path" value="/src/objects/OrderItem.object" />
+      <option name="type" value="MODIFIED" />
+    </index-record>
+    <index-record>
+      <option name="path" value="/src/objects/ServiceTerritoryMember.object" />
+      <option name="type" value="MODIFIED" />
+    </index-record>
+    <index-record>
+      <option name="path" value="/src/objects/ShiftWorkTopic.object" />
+      <option name="type" value="MODIFIED" />
+    </index-record>
+  </component>
+</project>
