@@ -1,0 +1,61 @@
+<template>
+    <div class="slds-box slds-theme_default">
+        <!--<ul class="slds-accordion">
+            <li class="slds-accordion__list-item">
+                <section class="slds-accordion__section slds-is-open">
+                    <div class="slds-accordion__summary">
+                        <h2 class="slds-accordion__summary-heading">
+                            <button class="slds-button slds-button_reset slds-accordion__summary-action" aria-controls="referenceId-42" aria-expanded="true" title="Accordion summary">
+                                <svg class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                                </svg>
+                                <span class="slds-accordion__summary-content">Accordion summary</span>
+                            </button>
+                        </h2>
+                    </div>
+                    <div class="slds-accordion__content" id="referenceId-42">Accordion details - A</div>
+                </section>
+            </li>
+            <li class="slds-accordion__list-item">
+                <section class="slds-accordion__section">
+                    <div class="slds-accordion__summary">
+                        <h2 class="slds-accordion__summary-heading">
+                            <button class="slds-button slds-button_reset slds-accordion__summary-action" aria-controls="referenceId-43" aria-expanded="false" title="Accordion summary">
+                                <svg class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                                </svg>
+                                <span class="slds-accordion__summary-content">Accordion summary</span>
+                            </button>
+                        </h2>
+                    </div>
+                    <div hidden="" class="slds-accordion__content" id="referenceId-43">Accordion details - B</div>
+                </section>
+            </li>
+            <li class="slds-accordion__list-item">
+                <section class="slds-accordion__section">
+                    <div class="slds-accordion__summary">
+                        <h2 class="slds-accordion__summary-heading">
+                            <button class="slds-button slds-button_reset slds-accordion__summary-action" aria-controls="referenceId-44" aria-expanded="false" title="Accordion summary">
+                                <svg class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                                </svg>
+                                <span class="slds-accordion__summary-content">Accordion summary</span>
+                            </button>
+                        </h2>
+                    </div>
+                    <div hidden="" class="slds-accordion__content" id="referenceId-44">Accordion details - C</div>
+                </section>
+            </li>
+        </ul>-->
+        <lightning-accordion allow-multiple-sections-open
+                         active-section-name={activeSections}>
+        <lightning-accordion-section name="A" label="Placeholder A">
+            <p>This is the content area for section A.</p>
+        </lightning-accordion-section>
+
+        <lightning-accordion-section name="B" label="Placeholder B">
+            <p>This is the content area for section B.</p>
+        </lightning-accordion-section>
+    </lightning-accordion>
+    </div>
+</template>
