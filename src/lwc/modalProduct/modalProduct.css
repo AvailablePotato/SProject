@@ -1,0 +1,41 @@
+.modal-box {
+    height: 200px;
+}
+
+.tile {
+    height: 100%;
+    width: 100%;
+    padding: 2px;
+
+    justify-content: center;
+}
+
+
+.tile-text {
+    border-left: 1px solid rgba(1,118,211,255);
+    margin-left: 2px;
+    padding-left: 8px
+}
+
+.tile-text-name {
+    height: 15%;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+
+.tile-text-types {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tile-text-bottom-grid {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.tile-text-bottom-price {
+    font-size: 18px;
+    font-weight: bold;
+}

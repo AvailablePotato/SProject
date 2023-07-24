@@ -1,12 +1,8 @@
 <template>
-    <lightning-button-group>
-        <lightning-button label="Details" onclick={openDetailsModal}></lightning-button>
-        <lightning-button label="Add to cart"></lightning-button>
-    </lightning-button-group>
     <template  for:each={pairs} for:item="pair">
     <div key={pair} class="slds-grid slds-gutters grid-tile-container">
         <template for:each={pair} for:item="product">
-        <div class="slds-col slds-size_1-of-2" key={product.Id__c} data-item={product.Id__c}>
+        <div class="slds-col slds-size_1-of-2" key={product.Id__c}>
             <div class="slds-box slds-box_xx-small slds-theme_default tile">
                 <div class="slds-grid tile-stretch">
                     <div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
@@ -25,10 +21,10 @@
                             <div class="slds-col">
                                 <div class="slds-grid tile-text-bottom-grid">
                                     <div class="slds-col_bump-right">
-                                        <span class="tile-text-bottom-price">{product.Price__c}</span>
+                                        <span class="tile-text-bottom-price">${product.Price__c}</span>
                                     </div>
                                     <lightning-button-group>
-                                        <lightning-button label="Details" onclick={openDetailsModal}></lightning-button>
+                                        <lightning-button label="Details" data-item={product.Id__c} onclick={openDetailsModal}></lightning-button>
                                         <lightning-button label="Add to cart"></lightning-button>
                                     </lightning-button-group>
                                 </div>
