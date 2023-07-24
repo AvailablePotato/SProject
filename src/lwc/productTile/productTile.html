@@ -1,6 +1,12 @@
 <template>
-    <div class="slds-grid slds-gutters grid-tile-container">
-        <div class="slds-col slds-size_1-of-2">
+    <lightning-button-group>
+        <lightning-button label="Details" onclick={openDetailsModal}></lightning-button>
+        <lightning-button label="Add to cart"></lightning-button>
+    </lightning-button-group>
+    <template  for:each={pairs} for:item="pair">
+    <div key={pair} class="slds-grid slds-gutters grid-tile-container">
+        <template for:each={pair} for:item="product">
+        <div class="slds-col slds-size_1-of-2" key={product.Id__c} data-item={product.Id__c}>
             <div class="slds-box slds-box_xx-small slds-theme_default tile">
                 <div class="slds-grid tile-stretch">
                     <div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
@@ -8,22 +14,21 @@
                     </div>
                     <div class="slds-col slds-size_2-of-3 tile-text ">
                         <div class="slds-grid slds-grid_vertical tile-stretch">
-                            <div class="slds-col tile-text-name">
-                                Very cool product (trust me)
+                            <div class="slds-col tile-text-name slds-truncate">
+                                {product.Name}
                             </div>
-                            <div class="slds-col">
-                                <p class="slds-line-clamp">Lorem ipsum something something doors and corners something something
-                                    something something something something something something something something something
-                                    something something
+                            <div class="slds-col tile-text-middle">
+                                <p class="tile-text-types slds-truncate">{product.Type__c} - {product.Family__c}</p>
+                                <p class="slds-line-clamp">{product.Description__c}
                                 </p>
                             </div>
                             <div class="slds-col">
                                 <div class="slds-grid tile-text-bottom-grid">
                                     <div class="slds-col_bump-right">
-                                        <span class="tile-text-bottom-price">299,99</span>
+                                        <span class="tile-text-bottom-price">{product.Price__c}</span>
                                     </div>
                                     <lightning-button-group>
-                                        <lightning-button label="Details"></lightning-button>
+                                        <lightning-button label="Details" onclick={openDetailsModal}></lightning-button>
                                         <lightning-button label="Add to cart"></lightning-button>
                                     </lightning-button-group>
                                 </div>
@@ -33,38 +38,7 @@
                 </div>
             </div>
         </div>
-        <div class="slds-col slds-size_1-of-2">
-            <div class="slds-box slds-box_xx-small slds-theme_default tile">
-                <div class="slds-grid tile-stretch">
-                    <div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
-                        <div >img</div>
-                    </div>
-                    <div class="slds-col slds-size_2-of-3 tile-text ">
-                        <div class="slds-grid slds-grid_vertical tile-stretch">
-                            <div class="slds-col tile-text-name">
-                                Very cool product (trust me)
-                            </div>
-                            <div class="slds-col">
-                                <p class="slds-line-clamp">Lorem ipsum something something doors and corners something something
-                                    something something something something something something something something something
-                                    something something
-                                </p>
-                            </div>
-                            <div class="slds-col">
-                                <div class="slds-grid tile-text-bottom-grid">
-                                    <div class="slds-col_bump-right">
-                                        <span class="tile-text-bottom-price">299,99</span>
-                                    </div>
-                                    <lightning-button-group>
-                                        <lightning-button label="Details"></lightning-button>
-                                        <lightning-button label="Add to cart"></lightning-button>
-                                    </lightning-button-group>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </template>
     </div>
+    </template>
 </template>
