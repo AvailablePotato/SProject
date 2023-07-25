@@ -1,18 +1,17 @@
 <template>
-    <div class="slds-box slds-theme_default" onclick={bibabooba}>
-        <lightning-accordion allow-multiple-sections-open
-                         active-section-name={activeSections}>
+    <div class="slds-box slds-theme_default">
+        <lightning-accordion allow-multiple-sections-open active-section-name={activeSections}>
                 <template for:each={picklists} for:item="picklistField">
                     <div key={picklistField.label}>
                         <lightning-accordion-section name={picklistField.label} label={picklistField.label}>
-                            <template for:each={picklistField.items} for:item="picklistValue">
-                                <div key={picklistValue.label}>
-                                    <lightning-input type="checkbox" label={picklistValue.label}></lightning-input>
-                                </div>
-                            </template>
+                            <lightning-checkbox-group name={picklistField.label}
+                                                      options={picklistField.items}
+                                                      value={}
+                                                      onchange={handleCheckboxChange}>
+                            </lightning-checkbox-group>
                         </lightning-accordion-section>
                     </div>
                 </template>
-    </lightning-accordion>
+        </lightning-accordion>
     </div>
 </template>
