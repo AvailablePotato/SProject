@@ -1,0 +1,35 @@
+<template>
+    <lightning-quick-action-panel>
+        <div class="slds-box slds-box-small modal-box">
+            <div class="slds-grid tile">
+                <div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+                    <div >{img}</div>
+                </div>
+                <div class="slds-col slds-size_2-of-3 tile-text">
+                    <div class="slds-grid slds-grid_vertical">
+                        <div class="slds-col tile-text-name">
+                            {name}
+                        </div>
+                        <div class="slds-col">
+                            <p class="tile-text-types">{typeFamily}</p>
+                            <p>{description}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div slot="footer">
+            <div class="slds-col">
+                <div class="slds-grid tile-text-bottom-grid">
+                    <div class="slds-col_bump-right">
+                        <span class="tile-text-bottom-price">{price}</span>
+                    </div>
+                    <lightning-button-group>
+                        <lightning-button label="Close"></lightning-button>
+                        <lightning-button variant="brand" label="Add to cart"></lightning-button>
+                    </lightning-button-group>
+                </div>
+            </div>
+        </div>
+    </lightning-quick-action-panel>
+</template>
