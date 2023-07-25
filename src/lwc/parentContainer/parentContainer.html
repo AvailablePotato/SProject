@@ -1,0 +1,16 @@
+<template>
+    <div class="main-container">
+    <c-header-home></c-header-home>
+    <div class="slds-grid slds-gutters middle-element main-container-grid">
+        <div class="slds-col slds-size_1-of-4">
+            <c-filter-panel onfilterchanged={handleFilterChange}></c-filter-panel>
+        </div>
+        <div class="slds-col slds-size_3-of-4">
+            <c-search-bar onsearchquerychanged={handleSearchQueryChange}></c-search-bar>
+            <div class="middle-element">
+                <c-product-tile searchquery={parentSearchQuery} filtermap={parentFilterMap}></c-product-tile>
+            </div>
+        </div>
+    </div>
+    </div>
+</template>
